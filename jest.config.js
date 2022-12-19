@@ -15,10 +15,13 @@ const customJestConfig = {
     testEnvironment: 'jest-environment-jsdom',
     // Add any custom reporters and enable coverage
     collectCoverage: true,
-    collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
+    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.stories.{ts,tsx}'],
     coverageReporters: ['json', 'lcov', 'text', 'clover'],
     coverageDirectory: 'coverage',
     coveragePathIgnorePatterns: ['/node_modules/', '/.next/', '/coverage/', '/jest.setup.js'],
+    testPathIgnorePatterns: ['/node_modules/', '/.next/', '/coverage/', '/jest.setup.js'],
+    watchPathIgnorePatterns: ['/node_modules/', '/.next/', '/coverage/', '/jest.setup.js'],
+    modulePathIgnorePatterns: ['/node_modules/', '/.next/', '/coverage/', '/jest.setup.js'],
 
 }
 
