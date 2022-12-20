@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "test": "jest --watchAll",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "build-storybook": "build-storybook -s ./public",
+    "plop": "plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
     "@types/node": "18.11.17",
